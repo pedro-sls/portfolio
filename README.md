@@ -25,6 +25,12 @@ Instale as dependencias:
 npm install
 ```
 
+Copie o exemplo de ambiente se quiser validar metadados com uma URL propria:
+
+```bash
+cp .env.example .env.local
+```
+
 Execute o servidor de desenvolvimento:
 
 ```bash
@@ -76,9 +82,10 @@ feat: add hero section
 1. Definir documentacao e governanca do projeto.
 2. Criar base Next.js com TypeScript, Tailwind e ESLint.
 3. Implementar layout base e identidade visual.
-4. Adicionar conteudo do README do GitHub ao portfolio.
-5. Criar secao de projetos em destaque.
-6. Configurar deploy e validacoes de qualidade.
+4. Adicionar conteudo bilingue com deteccao automatica de idioma.
+5. Configurar SEO, Open Graph, robots.txt e sitemap.
+6. Criar secao de projetos em destaque.
+7. Configurar deploy e validacoes de qualidade.
 
 ## Links
 

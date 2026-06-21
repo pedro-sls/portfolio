@@ -33,16 +33,16 @@ export default async function Home() {
   const copy = siteCopy[locale];
 
   return (
-    <main className="min-h-screen bg-[#111111] text-[#f6f1e8]">
+    <main className="min-h-[100dvh] bg-[#111111] text-[#f6f1e8]">
       <section className="software-grid border-b border-white/10">
-        <div className="mx-auto grid min-h-screen w-full max-w-6xl items-center gap-12 px-6 py-12 md:grid-cols-[1fr_380px] md:px-10 lg:px-12">
+        <div className="mx-auto grid min-h-[100svh] w-full max-w-6xl items-center gap-12 px-6 py-14 sm:py-16 md:grid-cols-[1fr_380px] md:px-10 lg:px-12">
           <div className="max-w-3xl">
             <p className="mb-5 inline-flex items-center gap-2 rounded-md border border-[#2c5f5d] bg-[#102725] px-3 py-2 text-sm font-medium text-[#8fe3d0]">
               <MapPin size={16} aria-hidden="true" />
               {copy.profile.location}
             </p>
 
-            <h1 className="max-w-3xl text-5xl font-semibold leading-tight text-[#f6f1e8] sm:text-6xl">
+            <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-[#f6f1e8] sm:text-6xl lg:text-7xl">
               {profile.name}
             </h1>
 
@@ -85,7 +85,7 @@ export default async function Home() {
                 </span>
               </div>
               <div className="mt-5 grid gap-4">
-                <div className="relative aspect-square w-64 overflow-hidden rounded-md border border-white/10 bg-[#202020] sm:w-80">
+                <div className="relative aspect-square w-[min(20rem,calc(100vw-4rem))] overflow-hidden rounded-md border border-white/10 bg-[#202020] sm:w-80">
                   <Image
                     src={profile.avatarUrl}
                     alt="Foto de perfil de Pedro Sales"
@@ -150,20 +150,20 @@ export default async function Home() {
               const Icon = processIcons[index];
 
               return (
-              <article
-                key={title}
-                className="group rounded-lg border border-white/10 bg-[#171717] p-5 transition duration-200 hover:-translate-y-1 hover:border-[#8fe3d0] hover:bg-[#1b2423] hover:shadow-[0_18px_40px_rgba(0,0,0,0.3)]"
-              >
-                <div className="flex h-11 w-11 items-center justify-center rounded-md bg-[#102725] text-[#8fe3d0] transition group-hover:bg-[#8fe3d0] group-hover:text-[#111111]">
-                  <Icon size={22} aria-hidden="true" />
-                </div>
-                <h3 className="mt-5 text-lg font-semibold text-[#f6f1e8]">
-                  {title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-[#c9c2b5]">
-                  {description}
-                </p>
-              </article>
+                <article
+                  key={title}
+                  className="group rounded-lg border border-white/10 bg-[#171717] p-5 transition duration-200 hover:-translate-y-1 hover:border-[#8fe3d0] hover:bg-[#1b2423] hover:shadow-[0_18px_40px_rgba(0,0,0,0.3)]"
+                >
+                  <div className="flex h-11 w-11 items-center justify-center rounded-md bg-[#102725] text-[#8fe3d0] transition group-hover:bg-[#8fe3d0] group-hover:text-[#111111]">
+                    <Icon size={22} aria-hidden="true" />
+                  </div>
+                  <h3 className="mt-5 text-lg font-semibold text-[#f6f1e8]">
+                    {title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-[#c9c2b5]">
+                    {description}
+                  </p>
+                </article>
               );
             })}
           </div>
@@ -189,27 +189,29 @@ export default async function Home() {
               const Icon = architectureIcons[index];
 
               return (
-              <article
-                key={label}
-                className="group flex items-center justify-between gap-4 rounded-lg border border-white/10 bg-[#171717] p-4 transition duration-200 hover:-translate-y-0.5 hover:border-[#8fe3d0] hover:bg-[#1b2423]"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-md bg-[#102725] text-[#8fe3d0]">
-                    <Icon size={20} aria-hidden="true" />
+                <article
+                  key={label}
+                  className="group flex items-center justify-between gap-4 rounded-lg border border-white/10 bg-[#171717] p-4 transition duration-200 hover:-translate-y-0.5 hover:border-[#8fe3d0] hover:bg-[#1b2423]"
+                >
+                  <div className="flex min-w-0 items-center gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[#102725] text-[#8fe3d0]">
+                      <Icon size={20} aria-hidden="true" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="font-mono text-xs uppercase text-[#8d8679]">
+                        {label}
+                      </p>
+                      <h3 className="break-words font-semibold text-[#f6f1e8]">
+                        {value}
+                      </h3>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-mono text-xs uppercase text-[#8d8679]">
-                      {label}
-                    </p>
-                    <h3 className="font-semibold text-[#f6f1e8]">{value}</h3>
-                  </div>
-                </div>
-                <ArrowUpRight
-                  size={18}
-                  className="text-[#8fe3d0] opacity-0 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
-                  aria-hidden="true"
-                />
-              </article>
+                  <ArrowUpRight
+                    size={18}
+                    className="shrink-0 text-[#8fe3d0] opacity-0 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+                    aria-hidden="true"
+                  />
+                </article>
               );
             })}
           </div>
@@ -287,7 +289,7 @@ export default async function Home() {
                 href={profile.links.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-white/15 px-4 text-sm font-semibold text-[#f6f1e8] transition hover:border-[#8fe3d0] hover:bg-[#8fe3d0] hover:text-[#111111]"
+                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-md border border-white/15 px-4 text-sm font-semibold text-[#f6f1e8] transition hover:border-[#8fe3d0] hover:bg-[#8fe3d0] hover:text-[#111111] sm:w-auto"
               >
                 {copy.projects.action}
                 <ExternalLink size={17} aria-hidden="true" />

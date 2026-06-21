@@ -23,8 +23,12 @@ src/
     layout.tsx
     page.tsx
     globals.css
+    opengraph-image.tsx
+    robots.ts
+    sitemap.ts
   data/
     profile.ts
+    site.ts
     site-copy.ts
   lib/
     locale.ts
@@ -53,9 +57,21 @@ src/
 
 - `app`: rotas, paginas, layouts e metadados.
 - `components`: componentes visuais reutilizaveis, quando a pagina crescer.
-- `data`: conteudo editavel do portfolio.
+- `data`: conteudo editavel do portfolio e configuracoes do site.
 - `lib`: funcoes auxiliares e integracoes externas.
 - `public`: imagens e arquivos estaticos.
+
+## SEO e compartilhamento
+
+Os metadados ficam centralizados em `src/data/site.ts` e sao aplicados pelo
+`generateMetadata` do layout principal. A URL publica usa esta prioridade:
+
+1. `NEXT_PUBLIC_SITE_URL`, quando definida.
+2. `VERCEL_URL`, quando o deploy estiver na Vercel.
+3. `http://localhost:3000`, para desenvolvimento local.
+
+O projeto tambem gera `opengraph-image`, `robots.txt` e `sitemap.xml` pelo App
+Router do Next.js.
 
 ## Internacionalizacao
 

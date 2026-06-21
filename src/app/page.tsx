@@ -153,10 +153,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f6f1e8] text-[#111111]">
+      <section className="border-b border-white/10 bg-[#121b1a] text-[#f6f1e8]">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 lg:px-12">
           <div className="mb-8">
-            <p className="font-mono text-sm font-semibold uppercase text-[#2c5f5d]">
+            <p className="font-mono text-sm font-semibold uppercase text-[#8fe3d0]">
               Processo
             </p>
             <h2 className="mt-3 max-w-2xl text-3xl font-semibold">
@@ -168,13 +168,15 @@ export default function Home() {
             {engineeringFlow.map(({ title, description, icon: Icon }) => (
               <article
                 key={title}
-                className="group rounded-lg border border-[#d8d0c2] bg-white p-5 transition duration-200 hover:-translate-y-1 hover:border-[#2c5f5d] hover:shadow-[0_18px_40px_rgba(17,17,17,0.12)]"
+                className="group rounded-lg border border-white/10 bg-[#171717] p-5 transition duration-200 hover:-translate-y-1 hover:border-[#8fe3d0] hover:bg-[#1b2423] hover:shadow-[0_18px_40px_rgba(0,0,0,0.3)]"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-md bg-[#111111] text-[#8fe3d0] transition group-hover:bg-[#2c5f5d] group-hover:text-white">
+                <div className="flex h-11 w-11 items-center justify-center rounded-md bg-[#102725] text-[#8fe3d0] transition group-hover:bg-[#8fe3d0] group-hover:text-[#111111]">
                   <Icon size={22} aria-hidden="true" />
                 </div>
-                <h3 className="mt-5 text-lg font-semibold">{title}</h3>
-                <p className="mt-3 text-sm leading-6 text-[#5a5348]">
+                <h3 className="mt-5 text-lg font-semibold text-[#f6f1e8]">
+                  {title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-[#c9c2b5]">
                   {description}
                 </p>
               </article>
@@ -183,16 +185,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white text-[#111111]">
+      <section className="border-b border-white/10 bg-[#0f1514] text-[#f6f1e8]">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-[0.9fr_1.1fr] md:px-10 lg:px-12">
           <div>
-            <p className="font-mono text-sm font-semibold uppercase text-[#2c5f5d]">
+            <p className="font-mono text-sm font-semibold uppercase text-[#8fe3d0]">
               Arquitetura
             </p>
             <h2 className="mt-3 text-3xl font-semibold">
               Stack organizada por responsabilidade.
             </h2>
-            <p className="mt-5 text-base leading-7 text-[#5a5348]">
+            <p className="mt-5 text-base leading-7 text-[#c9c2b5]">
               A ideia e deixar claro onde cada ferramenta entra no sistema:
               interface, regra, dados, automacoes e entrega.
             </p>
@@ -202,22 +204,22 @@ export default function Home() {
             {systemLayers.map(({ label, value, icon: Icon }) => (
               <article
                 key={label}
-                className="group flex items-center justify-between gap-4 rounded-lg border border-[#d8d0c2] bg-[#f6f1e8] p-4 transition duration-200 hover:-translate-y-0.5 hover:border-[#2c5f5d] hover:bg-[#eef8f5]"
+                className="group flex items-center justify-between gap-4 rounded-lg border border-white/10 bg-[#171717] p-4 transition duration-200 hover:-translate-y-0.5 hover:border-[#8fe3d0] hover:bg-[#1b2423]"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-md bg-white text-[#2c5f5d]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-md bg-[#102725] text-[#8fe3d0]">
                     <Icon size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-mono text-xs uppercase text-[#7a7165]">
+                    <p className="font-mono text-xs uppercase text-[#8d8679]">
                       {label}
                     </p>
-                    <h3 className="font-semibold">{value}</h3>
+                    <h3 className="font-semibold text-[#f6f1e8]">{value}</h3>
                   </div>
                 </div>
                 <ArrowUpRight
                   size={18}
-                  className="text-[#2c5f5d] opacity-0 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+                  className="text-[#8fe3d0] opacity-0 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
                   aria-hidden="true"
                 />
               </article>
@@ -269,10 +271,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f6f1e8] text-[#111111]">
+      <section className="bg-[#121b1a] text-[#f6f1e8]">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 lg:px-12">
           <div className="mb-8">
-            <p className="font-mono text-sm font-semibold uppercase text-[#2c5f5d]">
+            <p className="font-mono text-sm font-semibold uppercase text-[#8fe3d0]">
               Projetos
             </p>
             <h2 className="mt-3 max-w-2xl text-3xl font-semibold">
@@ -280,16 +282,16 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="rounded-lg border border-dashed border-[#8b8173] bg-white p-6 transition duration-200 hover:-translate-y-0.5 hover:border-[#2c5f5d] hover:shadow-[0_18px_40px_rgba(17,17,17,0.1)]">
+          <div className="rounded-lg border border-dashed border-white/20 bg-[#171717] p-6 transition duration-200 hover:-translate-y-0.5 hover:border-[#8fe3d0] hover:bg-[#1b2423] hover:shadow-[0_18px_40px_rgba(0,0,0,0.28)]">
             <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
               <div className="max-w-2xl">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-md bg-[#111111] text-[#f0c86a]">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-md bg-[#102725] text-[#f0c86a]">
                   <Rocket size={22} aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-semibold">
+                <h3 className="text-xl font-semibold text-[#f6f1e8]">
                   {projectPlaceholder.title}
                 </h3>
-                <p className="mt-3 text-base leading-7 text-[#5a5348]">
+                <p className="mt-3 text-base leading-7 text-[#c9c2b5]">
                   {projectPlaceholder.description}
                 </p>
               </div>
@@ -297,7 +299,7 @@ export default function Home() {
                 href={profile.links.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[#111111] px-4 text-sm font-semibold transition hover:bg-[#111111] hover:text-white"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-white/15 px-4 text-sm font-semibold text-[#f6f1e8] transition hover:border-[#8fe3d0] hover:bg-[#8fe3d0] hover:text-[#111111]"
               >
                 Ver GitHub
                 <ExternalLink size={17} aria-hidden="true" />

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { getHtmlLang, getPreferredLocale } from "@/lib/locale";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,19 +14,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pedro Sales | Portfolio",
+  title: "Pedro Sales | Software Engineering Portfolio",
   description:
-    "Portfolio de Pedro Sales, estudante de Engenharia de Software com foco em desenvolvimento web, automacoes e integracoes.",
+    "Software Engineering portfolio by Pedro Sales, focused on web development, automation, integrations, and maintainable software foundations.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getPreferredLocale();
+
   return (
     <html
-      lang="pt-BR"
+      lang={getHtmlLang(locale)}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

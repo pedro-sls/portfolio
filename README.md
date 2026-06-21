@@ -1,44 +1,74 @@
 # Portfolio
 
-Portfólio pessoal de Pedro Sales, desenvolvido para apresentar trajetória, stack, projetos e formas de contato com uma base técnica bem organizada.
+Portfolio pessoal de Pedro Sales, desenvolvido para apresentar trajetoria,
+stack, projetos e formas de contato com uma base tecnica bem organizada.
 
 ## Objetivo
 
-Construir um site de portfólio profissional, responsivo e fácil de evoluir, usando boas práticas de Engenharia de Software desde o início do projeto.
+Construir um site de portfolio profissional, responsivo e facil de evoluir,
+usando boas praticas de Engenharia de Software desde o inicio do projeto.
 
 ## Stack planejada
 
 - Framework: Next.js com App Router.
 - Linguagem: TypeScript.
-- Estilização: Tailwind CSS.
-- Ícones: lucide-react.
-- Animações: framer-motion, quando agregar valor à experiência.
+- Estilizacao: Tailwind CSS.
+- Icones: lucide-react.
+- Animacoes: framer-motion, quando agregar valor a experiencia.
 - Deploy: Vercel.
+
+## Desenvolvimento local
+
+Instale as dependencias:
+
+```bash
+npm install
+```
+
+Copie o exemplo de ambiente se quiser validar metadados com uma URL propria:
+
+```bash
+cp .env.example .env.local
+```
+
+Execute o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+Valide o projeto antes de abrir Pull Request:
+
+```bash
+npm run lint
+npm run build
+```
 
 ## Fluxo de branches
 
-- `main`: versão estável e pronta para produção.
-- `develop`: integração das próximas entregas.
+- `main`: versao estavel e pronta para producao.
+- `develop`: integracao das proximas entregas.
 - `feature/*`: desenvolvimento de novas funcionalidades.
-- `fix/*`: correções pontuais.
-- `hotfix/*`: correções urgentes a partir de produção.
+- `fix/*`: correcoes pontuais.
+- `hotfix/*`: correcoes urgentes a partir de producao.
 
-Toda mudança relevante deve sair de uma branch de trabalho e passar por Pull Request antes de entrar em `develop` ou `main`.
+Toda mudanca relevante deve sair de uma branch de trabalho e passar por Pull
+Request antes de entrar em `develop` ou `main`.
 
-## Padrão de commits
+## Padrao de commits
 
 O projeto segue Conventional Commits:
 
 ```txt
 feat: adiciona nova funcionalidade
 fix: corrige comportamento existente
-docs: altera documentação
-style: altera formatação/estilo sem mudar comportamento
+docs: altera documentacao
+style: altera formatacao/estilo sem mudar comportamento
 refactor: melhora estrutura sem alterar comportamento
 test: adiciona ou ajusta testes
-chore: tarefas de manutenção
-ci: altera pipelines e automações
-build: altera build, dependências ou empacotamento
+chore: tarefas de manutencao
+ci: altera pipelines e automacoes
+build: altera build, dependencias ou empacotamento
 ```
 
 Exemplo:
@@ -49,12 +79,13 @@ feat: add hero section
 
 ## Primeiras entregas
 
-1. Definir documentação e governança do projeto.
+1. Definir documentacao e governanca do projeto.
 2. Criar base Next.js com TypeScript, Tailwind e ESLint.
 3. Implementar layout base e identidade visual.
-4. Adicionar conteúdo do README do GitHub ao portfólio.
-5. Criar seção de projetos em destaque.
-6. Configurar deploy e validações de qualidade.
+4. Adicionar conteudo bilingue com deteccao automatica de idioma.
+5. Configurar SEO, Open Graph, robots.txt e sitemap.
+6. Criar secao de projetos em destaque.
+7. Configurar deploy e validacoes de qualidade.
 
 ## Links
 

@@ -10,7 +10,7 @@ export const runtime = "nodejs";
 export async function POST(request: Request) {
   if (!isVaultConfigured()) {
     return NextResponse.json(
-      { message: "Vault nao configurado." },
+      { message: "Nao disponivel." },
       { status: 503 },
     );
   }
@@ -34,4 +34,3 @@ export async function POST(request: Request) {
 
   return NextResponse.json({ ok: true });
 }
-

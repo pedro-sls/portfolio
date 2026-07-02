@@ -39,13 +39,13 @@ export async function PUT(request: Request) {
   }
 
   try {
-    const selected = await writeFeaturedProjectIds(
+    const result = await writeFeaturedProjectIds(
       body.selected.filter(
         (projectId): projectId is string => typeof projectId === "string",
       ),
     );
 
-    return NextResponse.json({ selected });
+    return NextResponse.json(result);
   } catch {
     return NextResponse.json(
       { message: "Nao foi possivel salvar os destaques neste ambiente." },
